@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lemon&family=Sarabun&display=swap');
+
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5Cf6;
+    --gray: #6B7280;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #EEE;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-family: 'Lemon', cursive;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+#nova-tarefa {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#nova-tarefa-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-family: 'Lato';
+    font-size: 1.25rem;
+}
+
+#nova-tarefa-input::placeholder {
+    color: var(--gray);
+}
+
+#nova-tarefa-submit {
+    color: var(--pink);
+    font-family: 'Lato';
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#nova-tarefa-submit:hover {
+    opacity: 0.8;
+}
+
+#nova-tarefa-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.lista-tarefas {
+    padding: 1rem;
+}
+
+.lista-tarefas h2 {
+    font-family: 'Lemon', cursive;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+#tarefas .tarefa {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    font-family: 'Lato';
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tarefas .tarefa .content {
+    flex: 1 1 0%;
+}
+
+#tarefas .tarefa .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tarefas .tarefa .content .text:not(:read-only) {
+    color: var(--pink);
+}
+
+#tarefas .tarefa .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.tarefa .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-family: 'Lato';
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.tarefa .actions button:hover {
+    opacity: 0.8;
+}
+
+.tarefa .actions button:active {
+    opacity: 0.6;
+}
+
+.tarefa .actions .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tarefa .actions .delete {
+    color: crimson;
+}
